@@ -1,42 +1,151 @@
-# Resume-Screening-with-Machine-Learning-Job-Recommendations-Parsing-Categorization
+📄 End-to-End Resume Screening System
 
-blog post: https://medium.com/@611noorsaeed/building-resume-screening-app-resume-screening-with-machine-learning-job-recommendations-b1adc6b15cad
+A machine learning & NLP-powered web application that automates resume categorization, job recommendation, and resume parsing within a unified pipeline.
+
+1. Overview
+   This project demonstrates a complete resume analysis workflow where users can upload resumes (PDF/TXT), and the system:
+
+a) Classifies resumes into professional domains
+
+b) Recommends relevant job roles
+
+c) Extracts structured candidate information
+
+d) Built using Python, NLP techniques, Machine Learning, and Flask.
+
+2. Core Features:
+
+## Resume Categorization
+
+Classifies resumes into predefined categories:
+
+- IT
+- Finance
+- HR
+- Education
+- Healthcare
+- Engineering
+- Banking
+
+## Job Recommendation
+
+Suggests suitable job roles based on extracted resume content:
+
+- Backend Developer
+- Interaction Designer
+- Financial Analyst
+
+## Resume Parsing
+
+Extracts key details from unstructured resumes:
+
+- Name
+- Phone Number
+- Email Address
+- Skills
+- Education
+
+## Technical Implementation
+
+1. Dataset
+
+- 2,484 resumes
+- Multiple job categories
+- Imbalanced class distribution
+
+2. Data Balancing
+
+- Handled using:
+- Over-sampling
+- Under-sampling
+- via sklearn.utils.resample
+
+## Text Preprocessing
+
+1. Stopword removal
+2. Special character cleaning
+3. Removal of URLs, emails, phone numbers (for classification)
+
+## Feature Engineering
+
+1. TF-IDF Vectorizer
+
+## Model
+
+1. Random Forest Classifier
+
+Task Accuracy
+Resume Categorization ~74%
+Job Recommendation ~100%\*
+
+\*Filtered dataset with frequent job classes
+
+## Resume Parsing Approach
+
+1. Implemented using:
+
+*Regular Expressions (re)
+*Custom extraction functions
+*Predefined skill & education keyword lists
+*PDF text extraction via PyPDF2
+
+## Web Application
+
+1. Backend
+
+- Flask (Python)
+
+2. Frontend
+
+- HTML
+- CSS
+- Jinja2 Templates
+
+## Workflow
+
+1. Upload Resume (PDF/TXT)
+2. Text Extraction
+3. Preprocessing
+4. TF-IDF Vectorization
+5. Category Prediction
+6. Job Recommendation
+7. Resume Parsing
+8. Results Display
+
+📁 Project Structure
+├── models/ # Trained ML models (.pkl)
+├── templates/ # HTML templates
+├── app.py # Flask backend
+├── notebooks/ # Training & experiments
+├── datasets/ # Resume & job datasets
+
+## Libraries & Tools
+
+1. scikit-learn
+2. pandas
+3. nltk
+4. PyPDF2
+5. Flask
+6. matplotlib
+7. seaborn
+8. pickle
+9. re
+
+## Key Learnings
+
+1. Importance of NLP preprocessing
+2. Handling imbalanced datasets
+3. TF-IDF for text classification
+4. Random Forest for multi-class problems
+5. Regex-based information extraction
+6. Deploying ML models using Flask
+
+## Limitations & Improvements
+
+- Minor parsing inaccuracies (names/phone numbers)
+- Could improve accuracy using:
+- Deep Learning (BERT / Transformers)
+- Better NER models (spaCy)
+- Larger balanced datasets
 
 Datasets: https://www.kaggle.com/datasets/noorsaeed/resume-datasets
-
-# Introduction:
-
-In the digital age, the recruitment process has undergone a significant transformation, thanks to advancements in machine learning and artificial intelligence. One such revolutionary application is in resume screening, where machine learning algorithms are utilized to automate and enhance the candidate selection process. In this post, we delve into an end-to-end project that leverages machine learning techniques to categorize resumes, provide job recommendations, and extract vital information seamlessly.
-
-# The Challenge:
-
-Traditional resume screening processes are often time-consuming and prone to human bias. Sorting through numerous resumes to identify suitable candidates for a job opening can be overwhelming for recruiters. Moreover, manually extracting relevant information from resumes, such as skills, education, and contact details, adds another layer of complexity to the process.
-
-# The Solution:
-
-Our project offers a comprehensive solution to streamline the resume screening process using machine learning. By harnessing the power of natural language processing (NLP) techniques and classification algorithms, we automate the categorization of resumes based on predefined criteria. Additionally, our system provides personalized job recommendations to match candidates with suitable job openings, optimizing the recruitment process.
-
-# Key Features:
-
-1: Resume Parsing: Our system utilizes NLP techniques to extract essential information from resumes, including contact details, skills, education, and work experience. This automated parsing eliminates the need for manual data entry and ensures accuracy and efficiency.
-
-2: Categorization: Machine learning algorithms categorize resumes into predefined categories based on specific criteria set by recruiters or hiring managers. This categorization enables recruiters to quickly identify top candidates for further evaluation.
-
-3: Job Recommendations: Leveraging machine learning models, our system recommends relevant job openings to candidates based on their skills, experience, and preferences. This personalized approach enhances candidate engagement and increases the likelihood of successful matches.
-
-4: Benefits:
-
-Time-saving: Automating the resume screening process reduces the time and effort required for candidate selection, allowing recruiters to focus on more strategic tasks.
-Improved efficiency: By leveraging machine learning algorithms, our system ensures consistent and unbiased resume evaluation, leading to more informed hiring decisions.
-Enhanced candidate experience: Personalized job recommendations increase candidate satisfaction and engagement, resulting in higher retention rates and improved employer branding.
-
-
-5: Conclusion:
-
-Machine learning has revolutionized the way we approach resume screening, offering unparalleled efficiency, accuracy, and scalability. Our end-to-end project demonstrates the transformative potential of machine learning in the recruitment process, empowering organizations to make data-driven hiring decisions and unlock the full potential of their workforce.
-
-Join us on this journey to reimagine the future of recruitment with machine learning. Together, we can revolutionize the way we identify, evaluate, and engage top talent, driving innovation and growth in the ever-evolving job market.
-
-
-
-
